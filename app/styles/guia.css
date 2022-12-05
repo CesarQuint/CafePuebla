@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+  background-color: rgb(15,15,15); 
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+
+h2.heading{
+    padding: 1rem;
+    text-align: center;
+    color: var(--cuart);
+    text-transform: capitalize;
+}
+
+div.entrada-grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 1rem;
+    padding: 1rem;
+}
+div.card{
+    padding: 1rem;
+    color:var(--cuart);
+    background-color: var(--pr);
+    display: flex;
+    border-radius: 2%;
+    transition: all 500ms;
+    transition-timing-function: ease;
+    }
+
+div.card img{
+    height:25vh;
+    padding: 0.5rem;
+    max-width: 12rem;
+}
+
+div.card div.contenido h3{
+    padding: 0.5rem;
+    color: var(--ter);
+}
+
+div.card div.contenido p.descripcion{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    margin: 0.5rem;
+}
+
+div.card div.contenido div.inferior{
+    padding: 0.5rem;
+}
+
+div.card div.inferior a{
+    color: var(--cuart);
+    text-decoration: none;
+    background-color: var(--ter);
+    padding: 0.5rem;
+    border-radius: 5%;
+    transition: all ;
+    }
+    
+    div.card div.inferior a:hover{
+    background-color: #9c4f30;
+    }
+
+    article.post{
+        padding: 2rem;
+        width: 90%;
+        margin: auto;
+        background-color: var(--cuart);
+        border-radius: 5px;
+        /*
+        Agregar al escalar
+        max-width: min-content;
+        */
+        
+    }
+    div.imgContenedor{
+        display: flex;
+        justify-content: center;
+    }
+    img.imagen{
+        width:50vw;
+    }
+
+    p.texto{
+    color:var(--pr);
+    white-space: pre-wrap;
+    }
+
+    p.fecha{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        color: var(--sec);
+    }
+
+    article.post h2{
+        color: var(--ter);
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    
+@media(max-width:1024px){
+    div.entrada-grid{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 1rem;
+        padding: 1rem;
+    }
+
+}
+
+@media(max-width:768px){
+
+    div.entrada-grid{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 1rem;
+        padding: 1rem;
+    }
+
+
+    
+    div.card img {
+        max-width: 8rem;
+}
+
+article.post {
+    padding: 1rem;
+    width: 80%;}
+    
+}
+    

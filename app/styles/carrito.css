@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    background-color: rgb(15,15,15); 
+    padding: 2rem;
+    color: var(--ter);
+    min-height: 32rem;
+  }
+
+.heading{
+    color: var(--cuart);
+}
+
+.contenido{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: flex-start;
+    gap:5rem
+}
+
+
+img.productoCarrito{
+    height: 15rem;
+}
+
+
+@media(max-width:1024px){
+    .contenido {
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .producto {
+        display: flex!important;
+        align-items: center;
+        padding: 1rem;
+        border-bottom: 1px solid var(--pr);
+        position: relative;
+        flex-direction: column;
+    }
+    .carrito{
+       
+            min-height: 26rem;
+            max-height: 32rem;
+            overflow-y: scroll;
+        
+    }
+}
+
+.carrito{
+    padding: 2rem;
+    background-color: var(--sec);
+    border-radius: 0.5rem;
+}
+.producto{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 4rem;
+    align-items: center;
+    padding: 1rem ;
+    border-bottom: 1px solid var(--pr);
+    position: relative;
+}
+
+.producto:last-of-type{
+    border-bottom: none;
+}
+
+.select{
+    all:unset;
+    border: 1px solid #cfcfcf;
+    text-align: center;
+    width: 100%;
+    padding: .5rem;
+    border-radius: 1rem;
+}
+
+.producto p{
+    margin: 0 0 1rem 0;
+}
+
+.producto span{
+    font-weight: 900;
+    font-size: 3.2rem;
+}
+
+.nombre{
+ font-weight: 700;
+ font-size: 2rem;
+ color: var(--cuart);
+}
+
+.producto .precio{
+ margin-top: 2rem;
+ font-weight: 700;
+ color: var(--primary);
+}
+.subtotal{
+ font-size: 2.2rem;
+ color: var(--pr);
+}
+
+.subtotal span{
+    color: var(--ter);
+}
+
+.resumen{
+    background-color: #F9F4FB ;
+    padding: 3rem ;
+    border-radius:1rem ;
+    position: sticky;
+    top: 3rem;
+}
+.btn_eliminar{
+    all:unset;
+    position: absolute;
+    top: 0rem;
+    right: 1rem;
+}
+.btn_eliminar:hover{
+    cursor: pointer;
+}
+
+img#carritoImg{
+    height: 2rem;
+}

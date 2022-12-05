@@ -1,0 +1,108 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+  background-color: rgb(15,15,15); 
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  min-height:35rem;
+}
+
+
+h2.heading{
+    padding: 1rem;
+    text-align: center;
+    color: var(--cuart);
+    text-transform: capitalize;
+}
+
+.mapa-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    }
+    
+.puntos { grid-area: 1 / 1 / 2 / 2; }
+.mapa { grid-area: 1 / 2 / 2 / 5; }
+
+ h2{
+    padding: 0.5rem;
+    color: var(--cuart);
+    text-align: center;
+}
+
+aside.puntos{
+    margin: 1rem;
+    background-color: var(--sec);
+    border-radius: 5px;
+}
+
+form.listado{
+    padding: 1rem;
+    display: flex;
+    flex-flow: column wrap;
+    overflow-x: hidden;
+}
+
+button.btnLugar{
+    padding: 1rem;
+    margin-top: 1rem;
+    text-transform: capitalize;
+    text-align: left;
+    background-color: var(--cuart);
+    color: var(--pr);
+    border: 0;
+    border-radius: 2px;
+    transition: all ;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+}
+
+button.btnLugar:hover{
+    padding-left: 4rem;
+    background-color:var(--pr);
+    cursor: pointer;
+    color: var(--cuart);
+}
+
+button.btnLugar img#logo{
+    height: 1rem;
+    margin-right: 1rem;
+}
+
+section.mapa h2{
+    text-align:left;
+}
+
+section.mapa div{
+    overflow: hidden;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+@media(max-width:768px){
+    .mapa-grid {
+        display: flex;
+        flex-flow: column wrap;
+    align-content: space-around;
+    align-items: center;
+        }
+
+        button.btnLugar:hover{
+            background-color:var(--pr);
+            cursor: pointer;
+            color: var(--cuart);
+            padding-left: 0;
+            text-align: right;
+        }
+        section.mapa div {
+            max-width: 20rem;
+        }
+
+}

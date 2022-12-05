@@ -1,0 +1,250 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+  background-color: rgb(15,15,15); 
+  min-height: 40rem;
+}
+
+h2.heading{
+    padding: 1rem;
+    text-align: center;
+    color: var(--cuart);
+}
+
+div.cafe-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 1rem;
+    padding: 1rem;
+}
+
+div.card{
+padding: 1rem;
+color:var(--cuart);
+background-color: var(--pr);
+
+background: linear-gradient(188deg, var(--sec) 0%, var(--pr) 100%);
+display: flex;
+overflow: hidden;
+position: relative;
+border-radius: 2%;
+transition: all 500ms;
+transition-timing-function: ease;
+height: 15rem;
+
+}
+
+div.card:hover{
+    box-shadow: 2px 1px 4px 0px var(--cuart);
+    display: grid;  
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2,auto);
+    align-items: center;
+    height:15rem;
+}
+
+div.card:hover img{
+    position: initial;
+    height:10rem;
+    grid-area: 1 / 1 / 2 / 2; 
+}
+
+div.card:hover  div.contenido{
+    display: initial;
+    text-align: left;
+    grid-area: 1 / 2 / 2 / 3;
+
+}
+div.card:hover  div.inferior{
+display: initial;
+grid-area: 2 / 1 / 3 / 3; 
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+}
+
+div.card img{
+    height: 15rem;
+    left:4rem;
+    top: 1rem;
+    position: absolute;
+    transition: all 500ms;
+    transition-timing-function: ease;
+}
+
+div.card div.contenido{
+    transition: all 500ms;
+    transition-timing-function: ease;
+    display: none;
+}
+
+div.card div.contenido h3{
+    color: var(--ter);
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+div.card div.contenido p.descripcion{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+
+div.card div.inferior span{
+    color: var(--ter);
+    font-size:larger;
+    font-weight: bold;
+}
+div.card div.inferior{
+    transition: all 500ms;
+transition-timing-function: ease;
+    display: none;
+
+}
+
+div.card div.inferior a{
+color: var(--cuart);
+text-decoration: none;
+background-color: var(--ter);
+padding: 0.5rem;
+border-radius: 5%;
+transition: all ;
+}
+
+div.card div.inferior a:hover{
+background-color: #9c4f30;
+}
+
+
+
+/*Seccion indivudual*/
+
+.cafe{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 1rem;
+    align-items: center;
+    max-width: 70rem;
+    height: 35rem;
+    align-content: space-evenly;
+    margin: 0 auto;
+}
+
+.cafe .imagen{
+    height: 60%;
+}
+
+.cafe .contenido{
+    padding: 1rem;
+    color: var(--cuart);
+}
+
+.cafe .contenido h3{
+    font-size: 2rem;
+    text-transform: uppercase;
+    color:var(--ter);
+    margin-bottom: 1rem;
+}
+
+.cafe .texto{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.cafe .precio{
+    color: var(--ter);
+    font-size: 4rem;
+    margin: 0;
+    font-weight: 900;
+}
+
+.formulario{
+display: flex;
+flex-direction: column;
+}
+
+.formulario label{
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    
+}
+.formulario select{
+    text-align: center;
+    padding: 1rem;
+    border-radius: 1rem;
+
+}
+
+.formulario input[type="submit"]{
+margin-top: 3rem;
+background-color: var(--ter);
+color: var(--cuart);
+text-transform: uppercase;
+padding: 1.4rem;
+font-weight: 700;
+border: none;
+transition-property:all;
+transition-duration: 300ms;
+}
+.formulario input[type="submit"]:hover{
+    cursor: pointer;
+    background-color:#aa461f;
+}
+
+@media(max-width:1024px){
+div.cafe-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    padding: 1rem;
+}
+}
+
+@media(max-width:768px){
+    div.cafe-grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 1rem;
+        padding: 1rem;
+    }
+
+    
+.cafe{
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1rem;
+    align-items: center;
+    align-content: space-evenly;
+    margin: 0 auto;
+    height: fit-content;
+}
+
+.cafe .imagen{
+    height:20rem;
+}
+
+.cafe .contenido h3{
+    font-size: 1.5rem;
+}
+
+.cafe .precio{
+    color: var(--ter);
+    font-size: 2rem;
+    margin: 0;
+    font-weight: 900;
+}
+
+.cafe .texto{
+    font-size: 1rem;
+}
+
+    }
+
+
+
